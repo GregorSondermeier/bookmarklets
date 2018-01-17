@@ -16,4 +16,4 @@ Reloads the current url with the appended GET parameter `fw-debug=true`. Also to
 
 ## [timestamp.js](timestamp.js)
 
-Reloads the current url with the appended GET paramter `timestamp=<timestamp>`.
+Reloads the current url with the appended GET paramter `ts=<timestamp>`.
