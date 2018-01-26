@@ -8,7 +8,7 @@ For `<code>` use the content of on of the files in this repository.
 
 ## [ad2info.js](ad2info.js)
 
-Reloads the current url with the appended GET parameter `ad2info`.
+Reloads the current url with the appended or removed GET parameter `ad2info`.
 
 ## [amp.js](amp.js)
 
