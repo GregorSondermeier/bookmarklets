@@ -1,16 +1,9 @@
-/////////////////////////////////////////////////////////////////////////////////
-//         a bookmarklet to add 'ts=<timestamp>' to current url         //
-/////////////////////////////////////////////////////////////////////////////////
+/**
+ * a bookmarklet to reload the current location with an added timestamp query paramater
+ */
 
-var split = window.location.href.split('?'),
-    url = split[0],
-    params = (split[1] || '').split('&').map((param) => param.split('=')),
-    idx = params.findIndex((param) => param[0] == 'ts');
- 
-if (idx != -1) {
-    params[idx][1] = new Date().getTime();
-} else {
-    params.push(['ts', new Date().getTime()]);
-}
- 
-window.location.href = `${url}?${params.map((param) => param.join('=')).join('&')}`;
+const searchParams = new URLSearchParams(location.search);
+
+searchParams.set('ts', new Date().getTime());
+
+location.search = searchParams.toString();
